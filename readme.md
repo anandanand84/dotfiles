@@ -1,4 +1,12 @@
-# Addy's dotfiles.
+# Anand's dotfiles. -- Forked from addyosmani/dotfiles.
+
+For more details look into addyosmani/dotfiles.
+
+You need to edit the below personal information for your configuration.
+
+
+
+
 
 This repo contains my personal dotfiles and are heavily based on [paul](https://github.com/paulirish/dotfiles/) and [mathias](https://github.com/mathiasbynens/dotfiles/)'s.
 
