@@ -73,7 +73,7 @@ function gitio() {
 #
 # usage:
 #   $ clone things
-#     .. git clone git@github.com:addyosmani/things.git things
+#     .. git clone git@github.com:anandanand84/things.git things
 #     .. cd things
 #     .. subl .
 #
@@ -82,14 +82,14 @@ function gitio() {
 #     .. cd generator
 #     .. subl .
 #
-#   $ clone git@github.com:addyosmani/dotfiles.git
-#     .. git clone git@github.com:addyosmani/dotfiles.git dotfiles
+#   $ clone git@github.com:anandanand84/dotfiles.git
+#     .. git clone git@github.com:anandanand84/dotfiles.git dotfiles
 #     .. cd dots
 #     .. subl .
 
 function clone {
   # customize username to your own 
-  local username="addyosmani"
+  local username="anandanand84"
 
   local url=$1;
   local repo=$2;
