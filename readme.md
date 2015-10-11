@@ -1,4 +1,4 @@
-# Anand's dotfiles. -- Forked from addyosmani/dotfiles.
+# My dotfiles. -- Forked from addyosmani/dotfiles.
 
 For more details look into addyosmani/dotfiles.
 
