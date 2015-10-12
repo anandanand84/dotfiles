@@ -45,3 +45,6 @@
 # http://rentzsch.tumblr.com/post/564806957/public-but-hackable-git-submodules
 [url "git@github.com:anandanand84/"]
   insteadOf = "git://github.com/anandanand84/"
+[user]
+	name = Anand Aravindan
+	email = anand.anand84@gmail.com
