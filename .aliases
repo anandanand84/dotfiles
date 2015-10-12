@@ -7,13 +7,14 @@ alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
 # Shortcuts
-alias d="cd ~/Documents/Dropbox"
+alias d="cd ~/Documents/"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
-alias p="cd ~/projects"
+alias p="cd ~/dev"
 alias g="git"
 alias h="history"
 alias j="jobs"
+alias dev="cd ~/dev"
 
 # programs
 
@@ -39,7 +40,7 @@ alias gpr="~/code/gpr $1"
 alias nom="rm -rf node_modules && npm cache clear && npm i"
 
 # general shortcuts
-alias pro="cd ~/projects"
+alias pro="cd ~/dev"
 alias gh="open -a google\ chrome 'http://github.com/anandanand84'"
 alias bl="open -a google\ chrome 'http://browserling.com'"
 
