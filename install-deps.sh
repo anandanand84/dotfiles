@@ -43,7 +43,7 @@ ln -s ~/Dropbox/Public/Photo\ Booth/ ~/Pictures/Photo\ Booth
 # then you grab public URL and send off your video message in a heartbeat.
 
 # commonly used npm deps
-sudo npm install -g yo gulp grunt-cli jshint browserify generator-webapp generator-gulp-webapp
+sudo npm install -g yo gulp grunt-cli jshint browserify generator-webapp generator-gulp-webapp cordova generator-polymer
 
 # chrome canary as default
 # on a mac you can set chrome canary as your default inside of Safari preferences :)
