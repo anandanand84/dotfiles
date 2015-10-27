@@ -25,6 +25,10 @@ shopt -s cdspell
 export LC_ALL="en_US.UTF-8"
 export LANG="en_US"
 
+export JAVA_HOME=$(/usr/libexec/java_home)
+
+export PATH=${JAVA_HOME}/bin:$PATH
+
 # Enable some Bash 4 features when possible:
 # * `autocd`, e.g. `**/qux` will enter `./foo/bar/baz/qux`
 # * Recursive globbing, e.g. `echo **/*.txt`
