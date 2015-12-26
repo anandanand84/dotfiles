@@ -1,3 +1,59 @@
+#lazy git, adds all files commits with passed message and pushes to the repository
+function lg() {
+    git add -A
+    git commit -a -m "$1"
+    local PACKAGEFILE="package.json"
+    if [ -f $PACKAGEFILE ];
+    then
+       echo "File $PACKAGEFILE exists. Bumping version patch"
+       npm version patch
+    else
+       echo "File $PACKAGEFILE does not exists"
+    fi
+    local BOWERFILE="bower.json"
+    if [ -f $BOWERFILE ];
+        then
+           echo "File $BOWERFILE exists. Bumping version patch"
+           bower version patch
+        else
+           echo "File $BOWERFILE does not exists"
+    fi
+    git push
+    git push --tags
+}
+
+function gr(){
+    mkdir projects;
+    cp ${2} projects/${2}
+    cd projects;
+    for repo_name in $(cat ${2})
+    do
+      git clone https://bitbucket.org/${1}/$repo_name.git;
+      cd $repo_name;
+      local PACKAGEFILE="package.json"
+      if [ -f $PACKAGEFILE ];
+      then
+         echo "File $PACKAGEFILE exists. Bumping version patch"
+         npm install
+      else
+         echo "File $PACKAGEFILE does not exists"
+      fi
+      local BOWERFILE="bower.json"
+      if [ -f $BOWERFILE ];
+          then
+             echo "File $BOWERFILE exists. Bumping version patch"
+             bower install --allow-root;
+          else
+             echo "File $BOWERFILE does not exists"
+      fi
+      cd ..
+    done
+    npm-auto-link
+    bower-auto-link
+}
+
+
+
 # Simple calculator
 function calc() {
         local result=""
@@ -108,7 +164,7 @@ function clone {
     url="git@github.com:$url/$repo.git";
   fi
 
-  git clone $url $repo && cd $repo && subl .;
+  git clone $url $repo && cd $repo && wstorm .;
 }
 
 # simple git log
