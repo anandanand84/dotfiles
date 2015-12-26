@@ -22,7 +22,7 @@ function lg() {
     git push --tags
 }
 
-function gr(){
+function getrepos(){
     mkdir projects;
     cp ${2} projects/${2}
     cd projects;
