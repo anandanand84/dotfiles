@@ -22,6 +22,22 @@ function lg() {
     git push --tags
 }
 
+function lgca(){
+    local REPOLIST="repo-list"
+    if [ -f $REPOLIST ];
+    then
+       echo "File $REPOLIST exists. Commiting all repositories"
+       for repo_name in $(cat $REPOLIST)
+           do
+             cd $repo_name
+             lg $1
+             cd ..
+           done
+    else
+       echo "File $PACKAGEFILE does not exists"
+    fi
+}
+
 function getrepos(){
     mkdir projects;
     cp ${2} projects/${2}
@@ -33,7 +49,7 @@ function getrepos(){
       local PACKAGEFILE="package.json"
       if [ -f $PACKAGEFILE ];
       then
-         echo "File $PACKAGEFILE exists. Bumping version patch"
+         echo "File $PACKAGEFILE exists. Running npm install"
          npm install
       else
          echo "File $PACKAGEFILE does not exists"
@@ -41,7 +57,7 @@ function getrepos(){
       local BOWERFILE="bower.json"
       if [ -f $BOWERFILE ];
           then
-             echo "File $BOWERFILE exists. Bumping version patch"
+             echo "File $BOWERFILE exists. Running bower install"
              bower install --allow-root;
           else
              echo "File $BOWERFILE does not exists"
