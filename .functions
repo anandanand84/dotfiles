@@ -38,6 +38,22 @@ function lgca(){
     fi
 }
 
+function statusall(){
+    local REPOLIST="repo-list"
+    if [ -f $REPOLIST ];
+    then
+       echo "File $REPOLIST exists. Commiting all repositories"
+       for repo_name in $(cat $REPOLIST)
+           do
+             cd $repo_name
+             git status
+             cd ..
+           done
+    else
+       echo "File $PACKAGEFILE does not exists"
+    fi
+}
+
 function getrepos(){
     mkdir projects;
     cp ${2} projects/${2}
