@@ -15,6 +15,7 @@ alias g="git"
 alias h="history"
 alias j="jobs"
 alias dev="cd ~/dev"
+alias connect="redis-cli -h pub-redis-17889.ap-southeast-1-1.1.ec2.garantiadata.com -p 17889"
 
 # programs
 
