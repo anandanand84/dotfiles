@@ -1,25 +1,32 @@
 #lazy git, adds all files commits with passed message and pushes to the repository
 function lg() {
-    git add -A
-    git commit -a -m "$1"
-    local BOWERFILE="bower.json"
-    if [ -f $BOWERFILE ];
-        then
-           echo "File $BOWERFILE exists. Bumping version patch"
-           bower version patch
-        else
-           echo "File $BOWERFILE does not exists"
+    echo "==============================================================="
+    pwd
+    echo "==============================================================="
+    if [[ `git status --porcelain` ]]; then
+    	    git add -A
+            git commit -a -m "$1"
+            local BOWERFILE="bower.json"
+            if [ -f $BOWERFILE ];
+                then
+                   echo "File $BOWERFILE exists. Bumping version patch"
+                   bower version patch
+                else
+                   echo "File $BOWERFILE does not exists"
+            fi
+            local PACKAGEFILE="package.json"
+                if [ -f $PACKAGEFILE ];
+                then
+                   echo "File $PACKAGEFILE exists. Bumping version patch"
+                   npm version patch
+                else
+                   echo "File $PACKAGEFILE does not exists"
+                fi
+            git push
+            git push --tags
+    else
+    	echo "No Changes"
     fi
-    local PACKAGEFILE="package.json"
-        if [ -f $PACKAGEFILE ];
-        then
-           echo "File $PACKAGEFILE exists. Bumping version patch"
-           npm version patch
-        else
-           echo "File $PACKAGEFILE does not exists"
-        fi
-    git push
-    git push --tags
 }
 
 function lgca(){
