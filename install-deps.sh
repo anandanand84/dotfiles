@@ -45,6 +45,13 @@ ln -s ~/Dropbox/Public/Photo\ Booth/ ~/Pictures/Photo\ Booth
 # commonly used npm deps
 sudo npm install -g yo gulp grunt-cli jshint pm2 browserify generator-webapp generator-gulp-webapp cordova generator-polymer node-inspector typescript v8-profiler
 
+#Install pip
+sudo easy_install pip
+
+#Install aws shell
+sudo pip install aws-shell --upgrade --ignore-installed six
+
+
 # chrome canary as default
 # on a mac you can set chrome canary as your default inside of Safari preferences :)
 
