@@ -116,6 +116,9 @@ function md() {
 	mkdir -p "$@" && cd "$@"
 }
 
+function bip (){
+   bower install --save PolymerElements/$1
+}
 
 # find shorthand
 function f() {
