@@ -5,13 +5,6 @@ for file in ~/.{extra,bash_prompt,exports,aliases,functions}; do
 done
 unset file
 
-# init z   https://github.com/rupa/z
-. ~/dotfiles/z/z.sh
-
-# init rvm
-source ~/.rvm/scripts/rvm
-
-
 # Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob
 
@@ -24,8 +17,6 @@ shopt -s cdspell
 # Prefer US English and use UTF-8
 export LC_ALL="en_US.UTF-8"
 export LANG="en_US"
-
-export JAVA_HOME=$(/usr/libexec/java_home)
 
 export PATH=${JAVA_HOME}/bin:$PATH
 
