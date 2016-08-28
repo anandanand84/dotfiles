@@ -61,6 +61,14 @@ function statusall(){
     fi
 }
 
+function ydpl(){
+  youtube-dl -o '%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s' ${1}
+}
+
+function ydudemy () {
+    youtube-dl -u anand.anand84@gmail.com -p ${1} -o '%(playlist)s/%(chapter_number)s - %(chapter)s/%(title)s.%(ext)s' ${2}
+}
+
 function getrepos(){
     mkdir projects;
     cp ${2} projects/${2}
