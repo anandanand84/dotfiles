@@ -5,6 +5,9 @@ for file in ~/.{extra,bash_prompt,exports,aliases,functions}; do
 done
 unset file
 
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+
 # Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob
 
