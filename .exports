@@ -9,3 +9,6 @@ export HISTFILESIZE=$HISTSIZE
 export HISTCONTROL=ignoredups
 # Make some commands not show up in history
 export HISTIGNORE="ls:ls *:cd:cd -:pwd;exit:date:* --help"
+#Modify your digitalocean token
+echo "You havent updated the Digital Ocean toke, createmachine and other commands wont work"
+export DOTOKEN=

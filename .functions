@@ -69,6 +69,22 @@ function ydudemy () {
     youtube-dl -u anand.anand84@gmail.com -p ${1} -o '%(playlist)s/%(chapter_number)s - %(chapter)s/%(title)s.%(ext)s' ${2}
 }
 
+function createmachine () {
+    docker-machine create --driver digitalocean --digitalocean-image ubuntu-16-04-x64 --digitalocean-access-token $DOTOKEN $1
+}
+
+function removemachine() {
+    docker-machine rm $1
+}
+
+function choosemachine() {
+    eval $(docker-machine env $1)
+}
+
+function unsetmachine() {
+    eval "$(docker-machine env -u)"
+}
+
 function getrepos(){
     mkdir projects;
     cp ${2} projects/${2}
