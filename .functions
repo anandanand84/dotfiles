@@ -45,6 +45,22 @@ function lgca(){
     fi
 }
 
+function npmupall(){
+    local REPOLIST="repo-list"
+    if [ -f $REPOLIST ];
+    then
+       echo "File $REPOLIST exists. Updating repositories"
+       for repo_name in $(cat $REPOLIST)
+           do
+             cd $repo_name
+             npm update
+             cd ..
+           done
+    else
+       echo "File $PACKAGEFILE does not exists"
+    fi
+}
+
 function statusall(){
     local REPOLIST="repo-list"
     if [ -f $REPOLIST ];
@@ -310,6 +326,14 @@ function escape() {
 function unidecode() {
 	perl -e "binmode(STDOUT, ':utf8'); print \"$@\""
 	echo # newline
+}
+
+function docstopall() {
+    docker stop $(docker ps -a -q)
+}
+
+function docrmall() {
+    docker rm $(docker ps -a -q)
 }
 
 # Add note to Notes.app (OS X 10.8)
