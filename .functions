@@ -97,8 +97,9 @@ function choosemachine() {
     eval $(docker-machine env $1)
 }
 
-function unsetmachine() {
-    eval "$(docker-machine env -u)"
+function docclean () {
+    docker rm -v $(docker ps -a -q -f status=exited)
+    docker rmi $(docker images -f "dangling=true" -q)
 }
 
 function getrepos(){
