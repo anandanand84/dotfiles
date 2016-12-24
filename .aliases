@@ -19,9 +19,9 @@ alias connect="redis-cli -h pub-redis-17889.ap-southeast-1-1.1.ec2.garantiadata.
 
 # programs
 
-alias st='open -a "Sublime Text"'
+alias st='open -a "Sublime Text 2"'
 # also/or do this:
-# ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/bin/subl
+# ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" ~/bin/subl
 alias preview="open -a '$PREVIEW'"
 alias xcode="open -a '/Developer/Applications/Xcode.app'"
 alias filemerge="open -a '/Developer/Applications/Utilities/FileMerge.app'"
@@ -42,7 +42,7 @@ alias nom="rm -rf node_modules && npm cache clear && npm i"
 
 # general shortcuts
 alias pro="cd ~/dev"
-alias gh="open -a google\ chrome 'http://github.com/anandanand84'"
+alias gh="open -a google\ chrome 'http://github.com/senthilaru'"
 alias bl="open -a google\ chrome 'http://browserling.com'"
 
 # be nice

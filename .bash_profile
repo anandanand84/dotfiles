@@ -21,6 +21,7 @@ shopt -s cdspell
 export LC_ALL="en_US.UTF-8"
 export LANG="en_US"
 
+export PATH=$PATH:/Applications/Sublime Text 2.app/Contents/SharedSupport/bin
 export PATH=/usr/local/cuda-8.0/bin${PATH:+:${PATH}}
 export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 export PATH=${JAVA_HOME}/bin:$PATH
