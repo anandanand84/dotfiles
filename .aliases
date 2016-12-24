@@ -16,6 +16,11 @@ alias j="jobs"
 alias dev="cd ~/dev"
 alias connect="redis-cli -h pub-redis-17889.ap-southeast-1-1.1.ec2.garantiadata.com -p 17889"
 alias spsa="d && cd SPSA"
+alias di="docker images"
+alias dr-all="docker rmi $(docker images -q)"
+alias drun="docker run -it "
+alias drun-latest="docker run -it $(docker images -q| head -1) /bin/bash"
+alias dexe-latest="docker exec -it $(docker ps -lq) /bin/bash"
 # programs
 
 alias st='open -a "Sublime Text 2"'
