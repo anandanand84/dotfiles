@@ -11,12 +11,11 @@ alias d="cd ~/Documents/"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias p="cd ~/dev"
-alias g="git"
 alias h="history"
 alias j="jobs"
 alias dev="cd ~/dev"
 alias connect="redis-cli -h pub-redis-17889.ap-southeast-1-1.1.ec2.garantiadata.com -p 17889"
-
+alias spsa="d && cd SPSA"
 # programs
 
 alias st='open -a "Sublime Text 2"'
