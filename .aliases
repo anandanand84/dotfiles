@@ -18,9 +18,8 @@ alias connect="redis-cli -h pub-redis-17889.ap-southeast-1-1.1.ec2.garantiadata.
 alias spsa="d && cd SPSA"
 
 alias dki="docker images"
-alias dkir-all="docker rmi $(docker images -q)"
-alias dkcs="docker stop $(docker ps -aq)"
-alias dkcr-all="docker rm $(docker ps -aq)"
+alias dkir-all="$(docker images -q) | xargs docker rmi "
+alias dkcr-all="docker ps -qa | xargs docker rm -f"
 alias dkrun="docker run -it "
 alias dkrun-latest="docker run -it $(docker images -q| head -1) /bin/bash"
 alias dkexe-latest="docker exec -it $(docker ps -lq) /bin/bash"
