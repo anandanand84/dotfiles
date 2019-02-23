@@ -27,6 +27,8 @@ alias dkexe-latest="docker exec -it $(docker ps -lq) /bin/bash"
 # programs
 
 alias st='open -a "Sublime Text 2"'
+alias code='open -a "Visual Studio Code"'
+
 # also/or do this:
 # ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" ~/bin/subl
 alias preview="open -a '$PREVIEW'"
