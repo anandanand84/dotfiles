@@ -34,6 +34,8 @@ alias dkexe-latest="docker exec -it $(docker ps -lq) /bin/bash"
 alias vlc='/Applications/VLC.app/Contents/MacOS/VLC'
 alias st='open -a "Sublime Text 2"'
 alias code='open -a "Visual Studio Code"'
+alias vlc='/Applications/VLC.app/Contents/MacOS/VLC'
+
 
 # also/or do this:
 # ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" ~/bin/subl
