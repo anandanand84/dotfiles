@@ -29,8 +29,9 @@ alias dkrun="docker run -it "
 alias dkrun-latest="docker run -it $(docker images -q|head -1) /bin/bash"
 alias dkexe-latest="docker exec -it $(docker ps -lq) /bin/bash"
 
-# programs
 
+# programs # RaspberryPi Utilities
+alias vlc='/Applications/VLC.app/Contents/MacOS/VLC'
 alias st='open -a "Sublime Text 2"'
 alias code='open -a "Visual Studio Code"'
 
