@@ -11,11 +11,23 @@ alias d="cd ~/Documents/"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias p="cd ~/dev"
-alias g="git"
 alias h="history"
 alias j="jobs"
 alias dev="cd ~/dev"
 alias connect="redis-cli -h pub-redis-17889.ap-southeast-1-1.1.ec2.garantiadata.com -p 17889"
+alias spsa="d && cd SPSA"
+
+alias gtp="git pull"
+alias gtc="git commit -m " 
+alias gts="git stash " 
+alias gtsp="git stash pop" 
+
+alias dki="docker images"
+alias dkir-all="docker images -q | xargs docker rmi "
+alias dkcr-all="docker ps -qa | xargs docker rm -f"
+alias dkrun="docker run -it "
+alias dkrun-latest="docker run -it $(docker images -q|head -1) /bin/bash"
+alias dkexe-latest="docker exec -it $(docker ps -lq) /bin/bash"
 
 
 alias dki="docker images"
@@ -32,9 +44,13 @@ alias chromium="/Applications/Chromium.app/Contents/MacOS/Chromium"
 
 # programs
 
-alias st='open -a "Sublime Text"'
+alias st='open -a "Sublime Text 2"'
+alias code='open -a "Visual Studio Code"'
+alias vlc='/Applications/VLC.app/Contents/MacOS/VLC'
+
+
 # also/or do this:
-# ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/bin/subl
+# ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" ~/bin/subl
 alias preview="open -a '$PREVIEW'"
 alias xcode="open -a '/Developer/Applications/Xcode.app'"
 alias filemerge="open -a '/Developer/Applications/Utilities/FileMerge.app'"
@@ -53,7 +69,7 @@ alias nom="rm -rf node_modules && npm cache clear && npm i"
 
 # general shortcuts
 alias pro="cd ~/dev"
-alias gh="open -a google\ chrome 'http://github.com/anandanand84'"
+alias gh="open -a google\ chrome 'http://github.com/senthilaru'"
 alias bl="open -a google\ chrome 'http://browserling.com'"
 
 # be nice
