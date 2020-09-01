@@ -16,6 +16,8 @@ alias j="jobs"
 alias dev="cd ~/dev"
 alias connect="redis-cli -h pub-redis-17889.ap-southeast-1-1.1.ec2.garantiadata.com -p 17889"
 alias spsa="d && cd SPSA"
+alias love="/Applications/love.app/Contents/MacOS/love"
+
 
 alias gtp="git pull"
 alias gtc="git commit -m " 
