@@ -82,23 +82,11 @@ function ydpl(){
 }
 
 function ydudemy () {
-    youtube-dl -u anand.anand84@gmail.com -p ${1} -o '%(playlist)s/%(chapter_number)s - %(chapter)s/%(title)s.%(ext)s' ${2}
-}
-
-function createmachine () {
-    docker-machine create --driver digitalocean --digitalocean-image ubuntu-16-04-x64 --digitalocean-access-token $DOTOKEN $1
+    youtube-dl -u senthil.aru@gmail.com -p ${1} -o '%(playlist)s/%(chapter_number)s - %(chapter)s/%(title)s.%(ext)s' ${2}
 }
 
 function docip() {
     docker run --net=host debian:jessie ip addr show | grep 192
-}
-
-function removemachine() {
-    docker-machine rm $1
-}
-
-function choosemachine() {
-    eval $(docker-machine env $1)
 }
 
 function docclean () {
@@ -216,7 +204,7 @@ function gitio() {
 #
 # usage:
 #   $ clone things
-#     .. git clone git@github.com:anandanand84/things.git things
+#     .. git clone git@github.com:senthilaru/things.git things
 #     .. cd things
 #     .. subl .
 #
@@ -225,14 +213,14 @@ function gitio() {
 #     .. cd generator
 #     .. subl .
 #
-#   $ clone git@github.com:anandanand84/dotfiles.git
-#     .. git clone git@github.com:anandanand84/dotfiles.git dotfiles
+#   $ clone git@github.com:senthilaru/dotfiles.git
+#     .. git clone git@github.com:senthilaru/dotfiles.git dotfiles
 #     .. cd dots
 #     .. subl .
 
 function clone {
   # customize username to your own 
-  local username="anandanand84"
+  local username="senthilaru"
 
   local url=$1;
   local repo=$2;
@@ -251,7 +239,7 @@ function clone {
     url="git@github.com:$url/$repo.git";
   fi
 
-  git clone $url $repo && cd $repo && wstorm .;
+  git clone $url $repo && cd $repo && code .;
 }
 
 # simple git log
